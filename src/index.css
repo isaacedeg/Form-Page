@@ -1,12 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Poppins400";
+    src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins500";
+    src: url("./assets/fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins600";
+    src: url("./assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins700";
+    src: url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: normal;
+  }
+}
+
 body {
+  background-color: #ff7a7a;
+  background-image: url('./assets/images/bg-intro-desktop.png');
+  background-repeat: no-repeat;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 50em) {
+  body{
+    background-image: url('./assets/images/bg-intro-mobile.png');
+    width: 100vw;
+    background-repeat: no-repeat;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
